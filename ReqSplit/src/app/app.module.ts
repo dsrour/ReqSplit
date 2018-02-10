@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { SplitComponent } from './split/split.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SplitComponent
   ],
   imports: [
     BrowserModule

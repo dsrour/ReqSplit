@@ -1,7 +1,15 @@
 <div><span>Total: </span>{{ _total | number : '1.2-2' }}</div>
 <div>
-  <label># Contributors:
-    <input [(ngModel)]="_numContributors" placeholder="0">
+  <label>
+    # Contributors:
+    <input type="number" min="1" [(ngModel)]="_numContributors" (ngModelChange)="generateContributorsList(_numContributors)" placeholder="0">
   </label>
+  <ul class="split">
+    <li *ngFor="let contrib of _contributors"
+        [class.selected]="contrib === 0"
+        (click)="onSelect(hero)">
+      <span class="badge">{{contrib.id}}</span> {{contrib.name}}
+    </li>
+  </ul>
 </div>
 

@@ -1,3 +1,7 @@
-<p>
-  split works!
-</p>
+<div><span>Total: </span>{{ _total | number : '1.2-2' }}</div>
+<div>
+  <label># Contributors:
+    <input [(ngModel)]="_numContributors" placeholder="0">
+  </label>
+</div>
+

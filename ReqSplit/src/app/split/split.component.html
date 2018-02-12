@@ -1,4 +1,7 @@
-<div><span>Total: </span>{{ _total | number : '1.2-2' }}</div>
+<div>
+  <label>
+    Total:
+    <input type="number" min="0" [(ngModel)]="_total" (ngModelChange)="generateContributorsList(_numContributors)" placeholder="0">
 <div>
   <label>
     # Contributors:

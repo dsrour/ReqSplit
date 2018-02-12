@@ -12,9 +12,14 @@
   <ul class="split">
     <li *ngFor="let contrib of _contributors"
         [class.selected]="_curSelectedContributor === contrib.id"
-        (click)="_curSelectedContributor = contrib.id">
+        (click)="_curSelectedContributor = _contributors[contrib.id]">
       <span class="badge">{{contrib.id}}</span> {{contrib.name}}
     </li>
   </ul>
+</div>
+
+<div *ngIf="_curSelectedContributor">
+  <h2>{{ _curSelectedContributor.name | uppercase }} Details</h2>
+  <div><span>Contribution: </span>{{_curSelectedContributor.contributionPercentage}}%</div>
 </div>
 

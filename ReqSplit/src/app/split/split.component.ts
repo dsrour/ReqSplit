@@ -11,7 +11,7 @@ export class SplitComponent implements OnInit {
     private _total = 0;
     private _numContributors = 0;
     private _contributors = [];
-    private _curSelectedContributor = 0;
+    private _curSelectedContributor;
 
     constructor() { }
 
